@@ -4,12 +4,12 @@ const Story = ({ exit }) => {
   const ref = createRef();
   useEffect(() => {
     const element = ref.current;
-    console.log(exit);
+    // console.log(exit);
     if (exit) {
       element.className = "hide";
-      console.log(element);
+      // console.log(element);
     }
-  }, [exit]);
+  }, [exit, ref]);
   return (
     <div className="show" ref={ref}>
       <h3 className="header">A friend in need is a friend indeed</h3>

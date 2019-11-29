@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Toggle = props => {
   const [toggle, setToggle] = useState({
@@ -13,14 +13,12 @@ const Toggle = props => {
   };
 
   const togglerWithTransition = () => {
-    console.log("check");
     if (toggle.on) {
       setToggle({
         ...toggle,
         transition: true
       });
       setTimeout(() => {
-        console.log("check2");
         setToggle({
           on: !toggle.on,
           transition: false
