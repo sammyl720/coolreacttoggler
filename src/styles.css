@@ -1,0 +1,88 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.burger {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.stick {
+  background: black;
+  min-width: 20px;
+  height: 4px;
+  margin: 2px;
+  animation: spinto 1s;
+}
+
+.cross {
+  background: black;
+  min-width: 20px;
+  height: 4px;
+  transform: rotate(-45deg);
+  animation: spin 1s;
+}
+.hide {
+  animation: hide 800ms;
+}
+.cross:before {
+  content: "";
+  opacity: 0.8;
+  background: black;
+  min-width: 20px;
+  height: 4px;
+  transform: rotate(90deg);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-100deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes spinto {
+  0% {
+    transform: rotate(-45deg);
+    position: absolute;
+  }
+  100% {
+    transform: rotate(0);
+    position: static;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.2;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0.2;
+  }
+}
+.show {
+  animation: show 1s;
+}

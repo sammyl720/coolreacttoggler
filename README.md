@@ -1,2 +1,0 @@
-# coolreacttoggler
-Created with CodeSandbox
